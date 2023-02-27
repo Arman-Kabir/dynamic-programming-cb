@@ -31,3 +31,20 @@ const bar = (n) => {
 // According to Big-O we can remove any multiplicative constants when we have a time complexity.
 // So, N over two is the same as one half times n. this simplifies nicely - O(n) time complexity.
 
+
+const dib = (n) => {
+    if (n <= 1) return;
+    dib(n - 1);
+    dib(n - 1);
+
+};
+// time com - O(2^n) ,,, space com -- O(n)
+
+
+
+const lib = (n) => {
+    if (n <= 1) return;
+    lib(n - 2);
+    lib(n - 2);
+
+};

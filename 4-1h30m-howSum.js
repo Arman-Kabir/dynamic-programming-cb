@@ -71,6 +71,11 @@ const howSum = (targetSum, numbers,memo={}) => {
     memo[targetSum] = null;
     return null;
 };
+/*
+    memoized:
+    time: O(n*m*m)
+    space:O(m^2)
+*/
 
 console.log(howSum(7, [5, 3, 4, 7]));
 console.log(howSum(7, [2,3]));

@@ -20,10 +20,10 @@ const bestSum = (targetSum, numbers) => {
     for (let num of numbers) {
         console.log(num);
         const remainder = targetSum - num;
-        // console.log(remainder);
+        console.log(remainder);
         const remainderCombination = bestSum(remainder, numbers);
         if (remainderCombination !== null) {
-            const combination = [ ...remainderCombination, num];
+            const combination = [...remainderCombination, num];
             // if the combination is shorted than the current "shortest", update it
             if (shortestCombination === null || combination.length < shortestCombination.length) {
                 shortestCombination = combination;
@@ -43,7 +43,7 @@ const bestSum = (targetSum, numbers) => {
 */
 
 console.log(bestSum(7, [5, 3, 4, 7]));
-console.log(bestSum(8, [2, 3, 5]));
-console.log(bestSum(8, [1, 4, 5]));
+// console.log(bestSum(8, [2, 3, 5]));
+// console.log(bestSum(8, [1, 4, 5]));
 // console.log(bestSum(100, [1, 2, 5, 25]));
 

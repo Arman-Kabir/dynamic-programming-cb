@@ -17,15 +17,31 @@ const canConstruct = (target, wordBank) => {
         return true;
     }
 
-    for(let word of wordBank){
+    for (let word of wordBank) {
         console.log(word);
 
-        if(target.indexOf(word) ===0){
-            console.log(target.indexOf(word),target,word);
+        if (target.indexOf(word) === 0) {
+            console.log(target.indexOf(word), target, word);
 
-            
+            const suffix = target.slice(word.length);
+            console.log(suffix);
+
+            if (canConstruct(suffix, wordBank) === true) {
+                return true;
+            };
         }
     }
+    return false;
 };
 
 console.log(canConstruct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd']));
+console.log(canConstruct('skateboard', ['bo', 'rd', 'ate', 't', 'ska', 'sk', 'boar']));
+console.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't']));
+// console.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeef', [
+//     "e",
+//     "ee",
+//     "eee",
+//     "eeee",
+//     "eeeee",
+//     "eeeeee",
+// ]));

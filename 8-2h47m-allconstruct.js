@@ -14,8 +14,10 @@
     allConstruct('',[cat,dog,mouse]) 
 
     allConstruct('purple',[purp,p,ur,le,purpl])
-*/
-
+    
+    // allConstruct('hello',[cat,dog,mouse])
+    
+    // allConstruct('',[cat,dog,mouse])
 
 
 console.log(allConstruct('purple', ['purp', 'p', 'ur', 'le', 'purpl']));
